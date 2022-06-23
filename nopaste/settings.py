@@ -108,7 +108,7 @@ if os.getenv("DEVELOP") == "True":
     ]
 else:
     CORS_ALLOWED_ORIGINS = [
-        "https://nopaste-like-app-front.vercel.app/",
+        "https://nopaste-like-app-front.vercel.app",
     ]
 
 # Password validation
