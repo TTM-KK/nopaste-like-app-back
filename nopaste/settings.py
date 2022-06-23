@@ -27,7 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = [os.getenv('DEBUG', 'False')]
+if os.getenv("DEBUG") == "Ture":
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST', 'localhost')]
 
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'nopaste.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if os.getenv("DEVELOP"):
+if os.getenv("DEVELOP") == "True":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
