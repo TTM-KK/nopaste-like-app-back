@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'nopaste.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if os.environ("DEVELOP"):
+if os.getenv("DEVELOP"):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
