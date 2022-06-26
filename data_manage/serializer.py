@@ -6,4 +6,4 @@ from .models import TextData
 class TextSerializer(ModelSerializer):
     class Meta:
         model = TextData
-        fields = ('text', 'id')
+        fields = ('text', 'id', 'lang')
